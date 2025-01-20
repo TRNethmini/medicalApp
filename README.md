@@ -12,7 +12,7 @@ This project was developed collaboratively by the group **Code Pioneers** to dem
 |---------------------|---------------------|
 | A.N Herath          | SA22493842          |
 | N.S.K Ranasinghe    | SA22492852          |
-| K.A.Y.T.P.Gunawardena  | SA22446794 Reg 3   |
+| K.A.Y.T.P.Gunawardena  | SA22446794   |
 | Placeholder Name 4  | Placeholder Reg 4   |
 | Placeholder Name 5  | Placeholder Reg 5   |
 
