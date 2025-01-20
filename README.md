@@ -1,3 +1,22 @@
+# Project Description
+
+**Hospital Management System** is a group project developed as part of the **Object-Oriented Programming (OOP)** module for our Higher Diploma in Information Technology. The system is designed to efficiently manage various hospital operations, including patient records, doctor schedules, appointment booking, and pharmacy inventory management.
+
+This project was developed collaboratively by the group **Code Pioneers** to demonstrate our understanding and application of OOP principles, Java programming, and JavaFX for GUI design.
+
+---
+
+## Group Members
+
+| Name                | Registration Number |
+|---------------------|---------------------|
+| A.N Herath          | SA22493842          |
+| Placeholder Name 2  | Placeholder Reg 2   |
+| Placeholder Name 3  | Placeholder Reg 3   |
+| Placeholder Name 4  | Placeholder Reg 4   |
+| Placeholder Name 5  | Placeholder Reg 5   |
+
+---
 # 🏥 Hospital Management System
 
 A comprehensive JavaFX application for managing hospital operations, including patient records, doctor schedules, appointments, and pharmacy inventory.
