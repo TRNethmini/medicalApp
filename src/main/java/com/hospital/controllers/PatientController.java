@@ -1,8 +1,9 @@
 package com.hospital.controllers;
 
-import com.hospital.models.Patient;
-import com.hospital.dao.PatientDAO;
 import java.util.List;
+
+import com.hospital.dao.PatientDAO;
+import com.hospital.models.Patient;
 
 public class PatientController {
     private PatientDAO patientDAO;

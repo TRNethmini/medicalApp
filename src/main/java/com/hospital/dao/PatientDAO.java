@@ -1,10 +1,15 @@
 package com.hospital.dao;
 
-import com.hospital.models.Patient;
-import com.hospital.utils.DatabaseConnection;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.hospital.models.Patient;
+import com.hospital.utils.DatabaseConnection;
 
 public class PatientDAO {
     

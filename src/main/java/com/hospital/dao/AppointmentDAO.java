@@ -1,12 +1,17 @@
 package com.hospital.dao;
 
-import com.hospital.models.Appointment;
-import com.hospital.utils.DatabaseConnection;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.hospital.models.Appointment;
+import com.hospital.utils.DatabaseConnection;
 
 public class AppointmentDAO {
     

@@ -1,13 +1,14 @@
 package com.hospital.controllers;
 
-import com.hospital.dao.AppointmentDAO;
-import com.hospital.dao.PatientDAO;
-import com.hospital.dao.DoctorDAO;
-import com.hospital.models.Appointment;
-import com.hospital.models.Patient;
-import com.hospital.models.Doctor;
 import java.time.LocalDateTime;
 import java.util.List;
+
+import com.hospital.dao.AppointmentDAO;
+import com.hospital.dao.DoctorDAO;
+import com.hospital.dao.PatientDAO;
+import com.hospital.models.Appointment;
+import com.hospital.models.Doctor;
+import com.hospital.models.Patient;
 
 public class AppointmentController {
     private AppointmentDAO appointmentDAO;

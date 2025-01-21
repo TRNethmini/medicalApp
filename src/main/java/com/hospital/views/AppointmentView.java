@@ -258,11 +258,19 @@ public class AppointmentView {
     }
 
     private void clearForm() {
-        patientComboBox.setValue(null);
-        doctorComboBox.setValue(null);
-        datePicker.setValue(LocalDate.now());
-        timeComboBox.setValue(null);
-        notesArea.clear();
+        // Find and clear all form fields in the GridPane
+        GridPane form = (GridPane) contentArea.lookup(".grid-pane");
+        if (form != null) {
+            form.getChildren().forEach(node -> {
+                if (node instanceof ComboBox) {
+                    ((ComboBox<?>) node).setValue(null);
+                } else if (node instanceof DatePicker) {
+                    ((DatePicker) node).setValue(LocalDate.now());
+                } else if (node instanceof TextArea) {
+                    ((TextArea) node).clear();
+                }
+            });
+        }
     }
 
     private void refreshAppointmentTable() {
@@ -292,6 +300,8 @@ public class AppointmentView {
         }
         if (datePicker.getValue() == null) {
             errorMessage.append("Please select a date\n");
+        } else if (datePicker.getValue().isBefore(LocalDate.now())) {
+            errorMessage.append("Please select a future date\n");
         }
         if (timeCombo.getValue() == null || timeCombo.getValue().isEmpty()) {
             errorMessage.append("Please select a time\n");
@@ -309,30 +319,30 @@ public class AppointmentView {
             // Parse the time string to create a LocalDateTime
             LocalDateTime appointmentDateTime = LocalDateTime.of(
                 date,
-                LocalTime.parse(time, DateTimeFormatter.ofPattern("HH:mm"))
+                LocalTime.parse(time)
             );
 
-            // Create and save the appointment
+            // Create new appointment
             Appointment appointment = new Appointment(
-                0, // ID will be set by database
+                0,  // ID will be set by database
                 patient.getId(),
                 doctor.getId(),
                 appointmentDateTime,
                 notes,
-                "SCHEDULED" // Default status
+                "SCHEDULED"  // Default status
             );
 
+            // Try to schedule the appointment
             if (appointmentController.scheduleAppointment(appointment)) {
                 showAlert("Success", "Appointment scheduled successfully!", Alert.AlertType.INFORMATION);
                 clearForm();
-                refreshAppointmentTable(); // Refresh the appointments table
+                refreshAppointmentTable();
             } else {
                 showAlert("Error", "Failed to schedule appointment.", Alert.AlertType.ERROR);
             }
         } catch (Exception e) {
             e.printStackTrace();
-            showAlert("Error", "An error occurred while scheduling the appointment: " + e.getMessage(), 
-                     Alert.AlertType.ERROR);
+            showAlert("Error", "An error occurred: " + e.getMessage(), Alert.AlertType.ERROR);
         }
     }
 

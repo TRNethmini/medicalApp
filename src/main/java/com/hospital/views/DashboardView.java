@@ -1,20 +1,22 @@
 package com.hospital.views;
 
-import com.hospital.models.User;
-import com.hospital.dao.PatientDAO;
-import com.hospital.dao.DoctorDAO;
 import com.hospital.dao.AppointmentDAO;
+import com.hospital.dao.DoctorDAO;
+import com.hospital.dao.PatientDAO;
+import com.hospital.models.User;
+
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
