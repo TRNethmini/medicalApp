@@ -14,7 +14,7 @@ This project was developed collaboratively by the group **Code Pioneers** to dem
 | N.S.K Ranasinghe           | SA22492852          |
 | K. A. Y. T. P. Gunawardena | SA22446794          |
 | A.A.H Dias                 | SA22494900          |
-| K.A.T Ridmi Nethmini       | SA22491144          |
+| K.A.T Ridmi Nethmini       | SA22491244          |
 
 ---
 
